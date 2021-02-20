@@ -8,10 +8,19 @@
 
       //computer chooses one of 3 choices at random
        
-    function computerPlay()
-      return Math.floor(Math.random() * 2)
-      
-
+    function computerPlay() {
+      let computerRoll = (Math.floor(Math.random()) * 3)
+      if (computerRoll == 0) {
+          return "Rock";
+      }
+      else if (computerRoll == 1) {
+          return "Paper";
+      }
+      else {
+        return "Scissors";
+      }
+    }
+    //function playerChoice(inputWeapon)
       
     
 
