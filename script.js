@@ -1,0 +1,119 @@
+  
+  
+  const btnR = document.querySelector('.btnR');
+  btnR.addEventListener('click', () => {
+    alert(button.id);
+  });
+  
+  
+  
+  
+  //computer chooses one of 3 choices at random
+       
+  function computerPlay() {
+    let computerRoll = (Math.floor(Math.random()* 3));
+    if (computerRoll === 0) {
+        return 0;
+    }
+    else if (computerRoll === 1) {
+        return 1;
+    }
+    else {
+      return 2;
+    }
+  }
+
+  
+  //transforms player input to lowercase string and returns 
+  function playerPlay() {
+    let playerChoice = prompt("Choose your weapon! Rock, paper, or scissors");
+    let playerWeapon = playerChoice.toLowerCase();
+    if (playerWeapon === "rock") {
+    return 3;
+    }
+   else if (playerWeapon === "paper") {
+      return 4;
+    }
+    else if (playerWeapon === "scissors") {
+      return 5;
+    }
+    else if (playerWeapon === "scissor") {
+      return 5;
+    }
+    else {
+      console.log(
+      "Invalid selection. Try again. Please choose rock, paper or scissors");
+      return
+    }
+  }
+//play one round of RPS. ive got conditionals for every permutation
+//there has to be a better way
+//this wont work with strings because booleans will always return false "NaN"
+  function playRound() {
+    let computerResult = computerPlay();
+    //console.log(computerResult)
+    let playerResult = playerPlay();
+    if (computerResult === 0 && playerResult === 3) {
+      console.log("Tie. Both played rock")
+      return "Tie. Both played rock";
+    }
+    else if (computerResult === 0 && playerResult === 4) {
+      console.log("Win. Paper beats rock")
+      return "Win. Paper beats rock";
+    }
+    else if (computerResult === 0 && playerResult === 5) {
+      console.log("Lose. Rock beats scissors")
+      return "Lose. Rock beats scissors";
+    }
+    else if (computerResult === 1 && playerResult === 3) {
+      console.log("Lose. Paper Beats rock")
+      return "Lose. Paper Beats rock"; 
+    }
+    else if (computerResult === 1 && playerResult === 4) {
+      console.log("Tie. Both played paper")
+      return "Tie. Both played paper";
+    }
+    else if (computerResult === 1 && playerResult === 5) {
+      console.log("Win. Scissors beat paper")
+      return "Win. Scissors beat paper";
+    }
+    else if (computerResult === 2 && playerResult === 3) {
+      console.log("Win. Rock beats scissors")
+      return "Win. Rock beats scissors";
+    }
+    else if (computerResult === 2 && playerResult === 4) {
+      console.log("Lose. Scissors beat paper")
+      return "Lose. Scissors beat paper";
+    }
+    else if (computerResult === 2 && playerResult === 5) {
+      console.log("Tie. Both played scissors")
+      return "Tie. Both played scissors";
+      
+    }
+    
+    //else { console.log(playerResult);
+    //}
+  }
+//play 5 rounds of RPS
+  function game() {
+    let w = 0;
+    if (playRound().includes('Win')) {
+      w = (w + 1);
+    }
+    if (playRound().includes('Win')) {
+      w = (w + 1);
+    }
+    if (playRound().includes('Win')) {
+      w = (w + 1);
+    }
+    if (playRound().includes('Win')) {
+      w = (w + 1);
+    }
+    if (playRound().includes('Win')) {
+      w = (w + 1);
+    }
+    console.log("You have won", w, 'out of 5.')
+    if (w >= 3) { console.log("You win!")}
+    else console.log("You lose. Rethink your life")
+  } 
+
