@@ -69,9 +69,6 @@ btnP.addEventListener('click', () =>  {
       gameOver.textContent = "Game Over. You lose. Press any button to reset."
     }
   }
-  console.log("roll", computerRoll)
-  console.log("p", playerScore)
-  console.log("c", computerRoll)
 });
 
 //scissor button
