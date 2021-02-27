@@ -8,3 +8,6 @@ Sorted out problem with computer roll. MISSED A SEMI COLON.
 
 2021-02-21 14:43:46
 Completed coding. Start game in debug console with "game()"
+
+2021-02-27 00:24:31
+Added HTML GUI

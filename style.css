@@ -1,16 +1,73 @@
 
- .lava-text {
-  background: url(//www.textures4photoshop.com/tex/thumbs/lava-magma-seamless-texture-free-download-70.jpg) no-repeat center center;
-  background-size: cover;
+ #title {
+   display: grid;
+   grid-template-columns: 25%  25%  25%  25%;
+   grid-template-rows: 10px 15px;
+   grid-template-areas: 
+    "rock rock . ."
+    "paper paper paper ."
+    "scissors scissors scissors scissors ";
+   justify-content: center;
+   padding-left: 15%;
+   padding-bottom: 0px;
+ }
+
+ h1  {
+   font-size: 70px;
+ }
+ #titR {
+   grid-area: rock;
+   padding-top: 0px;
+   padding-bottom: 100px;
+ }
+
+ #titP {
+   grid-area: paper;
+   padding-top: 25px;
+ }
+
+ #titS {
+   grid-area: scissors;
+   padding-top: 50px;
+   padding-bottom: 2px;
+ }
+
+ #buttons {
+  display: grid;
+  justify-content: center; 
+  grid-template-rows: min-content;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+ }
+ .button {
+   padding-top: 50px;
+   padding-bottom: 50px;
+   font-size: 100px;
+ }
+
+ .result {
+   font-size: 34px;
+   font-weight: bold;
+   
+ }
+
+ 
+ .lava-text { 
+  /* background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1348dc4c-8ae6-4de1-8482-1a6fab9ec7f5/d90dgoc-6b86b1f1-9e97-4ea8-bdb9-2726961f05a8.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMTM0OGRjNGMtOGFlNi00ZGUxLTg0ODItMWE2ZmFiOWVjN2Y1XC9kOTBkZ29jLTZiODZiMWYxLTllOTctNGVhOC1iZGI5LTI3MjY5NjFmMDVhOC5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.Ql58QXGZiOOimjw1DbtdI7O9olHEAp1RNFjxONyjUps); */
+  /* background-size: auto; */
+  /* background-repeat: repeat; */
   color: #fff;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -moz-background-clip:text;
   background-clip:text; 
   font-family:Catamaran,sans-serif;
-  font-size:10em;
+  font-size:1em;
   padding:0;
   margin:0;
   text-align:center;
   -webkit-text-stroke: 3px #ffaa00;
- }
+ } 
